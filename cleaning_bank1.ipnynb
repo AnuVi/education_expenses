@@ -1,0 +1,54 @@
+import pandas as pd 
+
+df = pd.read_csv('bank1.csv', sep=',', engine='python')
+#print(df.head())
+'''
+pd.set_option('display.max_columns', None)  # show all rows
+pd.set_option('display.width', None)        # down't break columns view
+#above didn't actually work - worked display(df).
+'''
+
+''' Alltogether was X columns. Needed only 4 of them. '''
+#removing unnecessary columns
+#axis=1 - to delete columns
+df = df.drop(['ColName1', 'ColName2', 'ColName3', 'Tühi'], axis=1)
+df_2 = df.drop(['ColName4', 'ColName5', 'ColName6', 'ColName7', 'ColName8'], axis=1)
+#df = df.drop(['ColName9', 'ColName10', 'ColName11'], axis=1)
+df_3 = df_2.iloc[:,:-3] #delete last 3 columns
+df_4 = df_3.iloc[:,:-1] # delete last column
+df_5 = df_4.drop(['ColName5'],axis=1)
+df_d = df_5
+#print(df_d.head())
+
+''' Control part'''
+#how many rows - 162
+print(len(df_d))
+#let's add id_column
+df_d['id'] = range(1, len(df) + 1)
+#print out only columns
+print(df_d.columns[1])
+
+# let's remove rows according to value in column ColName_ToWhom
+#df = df[~df['ColName_ToWhom'].isin(['x', 'b'])]
+df_d = df_d[~((df_d['ColName_ToWhom'] == 'Name') | (df_d['ColName_ToWhom'].str.startswith('Some Name')))]
+#unique values in column 'ColName_ToWhom'
+#print(df_d['ColName_ToWhom'].unique())
+
+#let's remove rows according to value in column ColName_Expl
+df_d = df_d[~df_d['ColName_Expl'].isin(['reason1', 'reason2'])]
+
+#let's remove rows according to value in column id
+df_d = df_d[~df_d['id'].isin([131,152])]'
+
+#let's drop id column
+df_d = df_d.drop(['id'], axis=1)
+
+#print(len(df_d1))
+#display(df_d1)
+
+#the new order of columns
+new__order = ['Date','Beneficiary','Sum','Currency','Explanation']
+df_d1 = df_d1[new_order]
+
+#lets write in file
+df_d1.to_csv('bank1_cleaned.csv', index=False)
