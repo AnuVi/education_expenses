@@ -1,3 +1,5 @@
+# it's .ipnynb file
+
 import pandas as pd 
 
 df = pd.read_csv('bank1.csv', sep=',', engine='python')
@@ -8,7 +10,6 @@ pd.set_option('display.width', None)        # down't break columns view
 #above didn't actually work - worked display(df).
 '''
 
-''' Alltogether was X columns. Needed only 4 of them. '''
 #removing unnecessary columns
 #axis=1 - to delete columns
 df = df.drop(['ColName1', 'ColName2', 'ColName3', 'Tühi'], axis=1)
