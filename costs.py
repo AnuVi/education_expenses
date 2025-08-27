@@ -1,7 +1,7 @@
 import pandas as pd
 
-df1 = pd.read_csv('bank1.csv')
-df2 = pd.read_csv('bank2.csv')
+df1 = pd.read_csv('bank1_cleaned.csv')
+df2 = pd.read_csv('bank2_cleaned.csv')
   
 # combining two files together
 df_combined = pd.concat([df1, df2], ignore_index=True)
