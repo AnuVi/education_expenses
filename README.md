@@ -7,9 +7,9 @@
 To learn data cleaning, analysis, and reporting.
 
 # Steps
-1. Choosing period and downloading .csv from Bank1 and Bank2
-2. Cleaning data of Bank1.
-3. Cleaning data of Bank2
+1. Choosing period and downloading .csv from _Bank1_ and _ Bank2_.
+2. Cleaning data of Bank1:
+3. Cleaning data of Bank2:
 
 # Tools
 I. Data cleaning: Python, Anaconda/Jupyter, VSCode, ChatGpt-free version
