@@ -1,5 +1,7 @@
-# it's .ipnynb file
-
+'''
+it's .ipnynb file
+in general both banks used the
+'''
 import pandas as pd 
 
 df = pd.read_csv('bank1.csv', sep=',', engine='python')
@@ -12,12 +14,11 @@ pd.set_option('display.width', None)        # down't break columns view
 
 #removing unnecessary columns
 #axis=1 - to delete columns
-df = df.drop(['ColName1', 'ColName2', 'ColName3', 'Tühi'], axis=1)
-df_2 = df.drop(['ColName4', 'ColName5', 'ColName6', 'ColName7', 'ColName8'], axis=1)
-#df = df.drop(['ColName9', 'ColName10', 'ColName11'], axis=1)
+df = df.drop(['ColName1', 'ColName2', 'ColName3', 'ColName4'], axis=1)
+df_2 = df.drop(['ColName5', 'ColName6', 'ColName7', 'ColName8', 'ColName9', 'ColName10'], axis=1)
 df_3 = df_2.iloc[:,:-3] #delete last 3 columns
 df_4 = df_3.iloc[:,:-1] # delete last column
-df_5 = df_4.drop(['ColName5'],axis=1)
+df_5 = df_4.drop(['ColName11'],axis=1)
 df_d = df_5
 #print(df_d.head())
 
