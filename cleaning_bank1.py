@@ -49,7 +49,7 @@ df_d = df_d.drop(['id'], axis=1)
 #display(df_d1)
 
 #the new order of columns
-new__order = ['Date','Beneficiary','Sum','Currency','Explanation']
+new_order = ['Date','Beneficiary','Sum','Currency','Explanation']
 df_d1 = df_d1[new_order]
 
 #lets write in file
