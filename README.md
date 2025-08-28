@@ -7,7 +7,7 @@
 To learn data cleaning, analysis, and reporting.
 
 # Steps
-1. Choosing period and downloading .csv from _Bank1_ and _ Bank2_.
+1. Choosing period and downloading .csv from _Bank1_ and _Bank2_.
 2. Cleaning data of Bank1 and Cleaning data of Bank2:
     
    Process was in both cases mainly the same. Deleting unnecessary columns/rows and adding columns.
