@@ -52,5 +52,5 @@ df_d = df_d.drop(['id'], axis=1)
 new_order = ['Date','Beneficiary','Sum','Currency','Explanation']
 df_d1 = df_d1[new_order]
 
-#lets write in file
+#lets write into file
 df_d1.to_csv('bank1_cleaned.csv', index=False)
