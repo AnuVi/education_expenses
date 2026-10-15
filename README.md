@@ -4,7 +4,7 @@
 
 
 # Overview
-To learn data cleaning, analysis, and reporting.
+To learn data cleaning.
 
 # Steps
 1. Choosing period and downloading .csv from _Bank1_ and _Bank2_.  
